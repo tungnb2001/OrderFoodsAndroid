@@ -13,10 +13,16 @@
         android:theme="@style/Theme.OrderFoods"
         tools:targetApi="31">
         <activity
+            android:name=".PasswordResetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
