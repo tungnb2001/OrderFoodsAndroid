@@ -6,6 +6,8 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.Date;
+
 @Entity(tableName = "user_table")
 public class User {
 
@@ -20,6 +22,13 @@ public class User {
     private String userName;
 
     @NonNull
+    @ColumnInfo(name = "gender")
+    private String gender;
+
+    @NonNull
+    @ColumnInfo(name = "dob")
+    private Date dob;
+    @NonNull
     @ColumnInfo(name = "password")
     private String password;
 
@@ -33,6 +42,19 @@ public class User {
     @NonNull
     @ColumnInfo(name = "userPhone")
     private String phone;
+
+    @NonNull
+    @ColumnInfo(name = "pronoun")
+    private String pronoun;
+
+    @NonNull
+    @ColumnInfo(name = "SecurityQuestion")
+    private String SecurityQuestion;
+
+    @NonNull
+    @ColumnInfo(name = "coin")
+    private String coin;
+
 
     public int getId() {
         return id;
@@ -49,6 +71,24 @@ public class User {
 
     public void setUserName(@NonNull String userName) {
         this.userName = userName;
+    }
+
+    @NonNull
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(@NonNull String gender) {
+        this.gender = gender;
+    }
+
+    @NonNull
+    public Date getDob() {
+        return dob;
+    }
+
+    public void setDob(@NonNull Date dob) {
+        this.dob = dob;
     }
 
     @NonNull
@@ -85,5 +125,32 @@ public class User {
 
     public void setPhone(@NonNull String phone) {
         this.phone = phone;
+    }
+
+    @NonNull
+    public String getPronoun() {
+        return pronoun;
+    }
+
+    public void setPronoun(@NonNull String pronoun) {
+        this.pronoun = pronoun;
+    }
+
+    @NonNull
+    public String getSecurityQuestion() {
+        return SecurityQuestion;
+    }
+
+    public void setSecurityQuestion(@NonNull String securityQuestion) {
+        SecurityQuestion = securityQuestion;
+    }
+
+    @NonNull
+    public String getCoin() {
+        return coin;
+    }
+
+    public void setCoin(@NonNull String coin) {
+        this.coin = coin;
     }
 }
